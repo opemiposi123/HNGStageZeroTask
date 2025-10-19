@@ -13,10 +13,11 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["HNGStageZeroTask/HNGStageZeroTask.csproj", "HNGStageZeroTask/"]
-RUN dotnet restore "./HNGStageZeroTask/HNGStageZeroTask.csproj"
+WORKDIR /src/HNGStageZeroTask
+RUN dotnet restore
 COPY . .
-WORKDIR "/src/HNGStageZeroTask"
-RUN dotnet build "./HNGStageZeroTask.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build -c $BUILD_CONFIGURATION -o /app/build
+
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
