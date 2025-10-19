@@ -32,7 +32,6 @@ namespace HNGStageZeroTask
             }
             catch
             {
-                // Return fallback message if API fails
                 return "Cats are wonderful animals, but our cat fact service is currently unavailable.";
             }
         }
