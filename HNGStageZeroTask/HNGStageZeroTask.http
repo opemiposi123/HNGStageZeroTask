@@ -1,0 +1,6 @@
+@HNGStageZeroTask_HostAddress = http://localhost:5110
+
+GET {{HNGStageZeroTask_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
