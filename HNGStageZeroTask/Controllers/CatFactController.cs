@@ -24,7 +24,7 @@ namespace HNGStageZeroTask.Controllers
                 status = "success",
                 user = new
                 {
-                    email = "andulwaheedmahmoodahmad6@gmail.com",
+                    email = "abdulwaheedmahmoodahmad6@gmail.com",
                     name = "AbdulWaheed MahmoodAhmad",
                     stack = "C#/.NET Core"
                 },
